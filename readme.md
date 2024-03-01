@@ -1,5 +1,22 @@
 # 
 
+
+status
+
+seems to be working with isolated script now (logging window.location) - so can remove the other scripts and background worker etc
+
+... but who knows?! why did it just start working???? 
+
+the interval ???
+
+
+
+
+
+
+
+
+
 Vite
 
 SWC for Typescript transpilation

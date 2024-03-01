@@ -1,12 +1,48 @@
 {
+  "name": "Job Search Plugin v3dev",
+  "description": "Chrome extension for analysing search results",
   "manifest_version": 3,
-  "name": "v3-extension-test-v1",
-  "version": "0.0.1",
-  "action": { "default_popup": "index.html" },
+  "version": "0.0.2",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon48.png"
+  },
+  "permissions": [
+    "cookies",
+    "identity",
+    "identity.email",
+    "clipboardWrite",
+    "storage"
+    ],
+
   "content_scripts": [
     {
+      "matches": [
+        "*://*.monster.com/*",
+        "*://*.monster.de/*"
+      ],
+      "js": ["src/windows/content/monster.tsx"],
+      "runAt": "document_end"
+    },
+    {
       "matches": ["https://www.google.com/*"],
-      "js": ["src/content/google.tsx"]
+      "js": ["src/windows/content/google.tsx"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["public/injected.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": [
+    "*://*.monster.com/*",
+    "*://*.monster.de/*"
   ]
+
 }
