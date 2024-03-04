@@ -1,14 +1,10 @@
 # 
 
 
-status
+## status
 
-seems to be working with isolated script now (logging window.location) - so can remove the other scripts and background worker etc
-
-... but who knows?! why did it just start working???? 
-
-the interval ???
-
+- working, with an injected script
+- will try 1 more approach - using service worker to add content script 
 
 
 

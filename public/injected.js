@@ -16,9 +16,7 @@ const poller = setInterval(() => {
         console.log(results);
 
 
-        setInterval(() => {
-            // @ts-ignore
-            console.log(window.searchResults);
-        }, 1000);
+        console.log(window.searchResults);
+
     }
 }, 300);

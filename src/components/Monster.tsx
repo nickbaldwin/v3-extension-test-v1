@@ -15,27 +15,6 @@ console.log('hello from monster')
 const a = document.querySelector('header')
 console.log(a);
 
-const poller = setInterval(() => {
-
-    console.log('polling')
-
-    // both card view and split view have this when list is rendered
-    const cards = document.querySelector('.infinite-scroll-component');
-    // let jobCardGrid = document.querySelector('#JobCardGrid');
-
-    if (cards !== null) {
-        clearInterval(poller);
-        console.log('polled')
-        const results = document.querySelector("#JobCardGrid>ul");
-        console.log(results);
-
-
-        setInterval(() => {
-            // @ts-ignore
-            console.log(window);
-        }, 1000);
-    }
-}, 300);
 
 
 
